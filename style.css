@@ -1,0 +1,224 @@
+/*Adicionando fontes*/
+@font-face {
+    font-family: Staatliches;
+    src: url('./fonts/Staatliches-Regular.ttf');
+}
+
+@font-face {
+    font-family: Palanquin;
+    src: url('./fonts/Palanquin-Regular.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+body {
+    /* posicionamento */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #EFF1FF;
+    /* texto */
+    text-align: center;
+}
+
+header {
+    background-color: #8E9AAF;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10vh;
+}
+
+main {
+    /* display */
+    display: contents;
+    color: #4A4E69;
+}
+
+h1 {
+    padding: 1vh 0;
+    background-color: #CBC0D3;
+    color: white;
+    font-family: Staatliches;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+}
+
+p {
+    margin: 4vh 10vw;
+    font-size: 0.9rem;
+    margin-bottom: 5vh;
+    font-family: Palanquin;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+#text2,
+#contact {
+    display: none;
+}
+
+figure {
+    position: relative;
+}
+
+figcaption {
+    font-family: Staatliches;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+}
+
+.desc {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: #FEEAFA;
+    border-radius: 20px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.desk1,
+.desk2 {
+    display: none;
+}
+
+/*Ajustando para desktop*/
+
+@media (min-width: 1024px) {
+    #contact {
+        display: block;
+        margin: 0;
+        grid-row: 5;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        margin-top: 80px;
+        width: 300px;
+    }
+
+    #spacecream {
+        font-weight: 700;
+    }
+
+    #text1 {
+        display: none;
+    }
+
+    #text2 {
+        display: block;
+        margin: 0 5vw;
+        color: white;
+        font-family: Roboto;
+    }
+
+    .desk1,
+    .desk2 {
+        display: inline;
+    }
+
+    .img1,
+    .img3 {
+        height: 150px;
+        width: 200px;
+    }
+
+    .img2,
+    .img4 {
+        height: 340px;
+        width: 200px;
+    }
+
+    body {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 33vw 0px repeat(3, 20vw);
+        grid-template-rows: repeat(5, 18vh);
+        align-items: flex-start;
+    }
+
+    header {
+        grid-row: span 5;
+        height: 100%;
+    }
+
+    header img {
+        margin-top: 6vh;
+    }
+
+    .img4,
+    .img2 {
+        grid-row: span 2;
+    }
+
+    .desc {
+        display: none;
+    }
+
+    .img3 {
+        grid-row: 3;
+        grid-column: 4;
+    }
+
+    .desk1 {
+        grid-row: 1;
+        grid-column: 5;
+    }
+
+    .img1 {
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    .desk1 {
+        grid-row: 2;
+        grid-column: 5;
+    }
+
+    .img3 {
+        grid-column: 4;
+        grid-row: 4;
+    }
+
+    .img2 {
+        grid-column: 4;
+        grid-row: 2;
+        height: 290px;
+    }
+
+    .img4 {
+        grid-row: 3;
+        grid-column: 5;
+    }
+
+    .desk2 {
+        grid-row: 3;
+        grid-column: 3;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        grid-template-columns: 33vw 50px repeat(3, 15vw);
+    }
+}
+
+@media (min-width: 1900px) {
+    body {
+        grid-template-columns: 30vw 100px repeat(3, 12vw);
+        grid-template-rows: repeat(5, 16vh);
+        justify-content: center;
+    }
+
+    header {
+        height: 90vh;
+    }
+
+}
